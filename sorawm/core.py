@@ -1,7 +1,7 @@
 from pathlib import Path
 from typing import Callable
 
-import ffmpeg
+import ffmpeg 
 import numpy as np
 from loguru import logger
 from tqdm import tqdm

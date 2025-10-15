@@ -1,0 +1,2 @@
+pip install pydantic diffusers safetensors huggingface_hub torch opencv-python tqdm loguru numpy uv einops omegaconf transformers ultralytics
+ffmpeg (HERE -> ./ffmpeg)
