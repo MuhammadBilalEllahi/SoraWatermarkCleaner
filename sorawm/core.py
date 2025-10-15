@@ -28,21 +28,21 @@ class SoraWM:
         height = input_video_loader.height
         fps = input_video_loader.fps
         total_frames = input_video_loader.total_frames
-        
 
-        
         temp_output_path = output_video_path.parent / f"temp_{output_video_path.name}"
         output_options = {
             "pix_fmt": "yuv420p",
             "vcodec": "libx264",
-            "preset": "slow",  
+            "preset": "slow",
         }
-        
+
         if input_video_loader.original_bitrate:
-            output_options["video_bitrate"] = str(int(int(input_video_loader.original_bitrate) * 1.2))
+            output_options["video_bitrate"] = str(
+                int(int(input_video_loader.original_bitrate) * 1.2)
+            )
         else:
             output_options["crf"] = "18"
-        
+
         process_out = (
             ffmpeg.input(
                 "pipe:",
